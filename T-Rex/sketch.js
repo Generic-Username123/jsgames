@@ -115,7 +115,7 @@ function endGame() {
 	noLoop();
   noStroke();
   textSize(40);
-  text("GAME OVER", width / 2, height / 2);
+  text("Game's over loser", width / 2, height / 2);
   textSize(20);
-  text("Press f5 to restart", width / 2, height / 2 + 20);
+  text("f5 to restart", width / 2, height / 2 + 20);
 }
