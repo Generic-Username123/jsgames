@@ -3,6 +3,7 @@ var horizon;
 var obstacleSpeed;
 
 var score;
+var obstacleCount;
 var obstacles = [];
 
 var dino;
@@ -49,6 +50,7 @@ function drawHUD() {
 	/* draw score */
 	noStroke();
   text("Score: " + score, width / 2, 30);
+  text("Obstacles Passed: " + obstacleCount, width / 2, 50);
 
 	/* draw T-Rex */
 	dino.draw();
@@ -63,7 +65,7 @@ function handleObstacles() {
 
 		obstacles[i].update(obstacleSpeed);
 		obstacles[i].draw();
-
+                obstacleCount = obstacleCount + 1
 		if (obstacles[i].hits(dino)) // if there's a collision
 			endGame();
 
